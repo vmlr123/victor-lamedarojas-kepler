@@ -5,10 +5,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/index.css" />
-    <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
   </head>
   <body>
     <header>
+      <nav>
+        <ul>
+          <li><a href="#About" aria-label="About Section">About</a></li>
+          <li>
+            <a href="#Experience" aria-label="Experience Section">Experience</a>
+          </li>
+          <li><a href="#Skills" aria-label="Skills Section">Skills</a></li>
+          <li>
+            <a href="#Projects" aria-label="Projects Section">Projects</a>
+          </li>
+          <li><a href="#Connect" aria-label="Connect Section">Connect</a></li>
+        </ul>
+      </nav>
       <h1>Victor Lameda Rojas</h1>
     </header>
     <main>
@@ -22,28 +35,54 @@
       </section>
       <section id="Experience">
         <h2>Experience</h2>
+        <div id="Wake-Tech">
+          <div id="WT-Title">
+            <h3>Wake Tech</h3>
+            <h4>Computer Programming Student</h4>
+            <br />
+            <p>
+              Completed HTML, CSS, JavaScript, SQL, Python, and Java classes.
+            </p>
+          </div>
+          <div id="WT-Info">
+            <p>August 2020 - July 2022</p>
+            <p>Raleigh, NC</p>
+          </div>
+        </div>
+      </section>
+      <section id="Skills">
+        <h2>Skills</h2>
+        <p>HTML</p>
+        <p>CSS</p>
+        <p>JavaScript</p>
+        <p>Python</p>
+        <p>Java</p>
+        <p>SQL</p>
+      </section>
+      <section id="Projects">
+        <h2>Projects</h2>
         <ul>
-          <li>Java Programming class at Wake Tech</li>
-          <li>JavaScript, CSS, HTML, and SQL class at Wake Tech</li>
-          <li>Python Programming class at Wake Tech</li>
+          <li><a href="index.html">Portfolio Website</a></li>
         </ul>
       </section>
       <section id="Connect">
         <h2>Connect</h2>
-        <a
-          href="https://github.com/vmlr123"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="./css/github-icon.png" alt="My GitHub"
-        /></a>
-        <a
-          href="https://www.linkedin.com/in/victor-lameda-rojas-9006331b0/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="./css/linkedin-icon.svg" alt="My LinkedIn"
-        /></a>
+        <div id="Social-Media">
+          <a
+            href="https://github.com/vmlr123"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="./images/github-icon.png" alt="GitHub Profile Icon" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/victor-lameda-rojas-9006331b0/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="./images/linkedin-icon.svg" alt="LinkedIn Profile Icon" />
+          </a>
+        </div>
       </section>
     </main>
     <footer>
