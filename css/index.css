@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Condensed+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poetsen+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Condensed+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap");
 
+/* Global styles */
 body {
   color: #001011;
   font-family: "Special Gothic Condensed One", "Roboto", sans-serif;
   letter-spacing: 0.05rem;
   background: linear-gradient(
     to bottom,
-    #001011,
     #003b3f,
     #005c63,
     #007d87,
@@ -18,26 +18,23 @@ body {
   );
 }
 
-#About,
-#Experience,
-#Connect {
-  width: 90%;
-  padding: 0.3rem 2rem 1.5rem 2rem;
-  margin: 2rem auto;
-  border-radius: 1rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.171);
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 0 2em 2em;
 }
 
-#About {
-  background-color: #3aafb9;
-}
+/* Typography */
 
-#Experience {
-  background-color: #64e9ee;
-}
-
-#Connect {
-  background-color: #079aadd0;
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+a {
+  text-shadow: 0px 1px 4px #00000017;
+  margin: 1em;
 }
 
 h1 {
@@ -52,7 +49,6 @@ h1 {
     sans-serif;
   background-color: #093a3e;
   color: white;
-  -webkit-text-stroke: 1px #000000ab;
   text-shadow: 0px 1px 4px #00000056;
 }
 
@@ -62,30 +58,227 @@ h2 {
   text-shadow: 0px 1px 4px #00000017;
 }
 
-li {
-  background-image: url("/css/bullet-point.png");
-  list-style: none;
-  margin: 1em 0;
-  background-size: 1em;
-  background-repeat: no-repeat;
-  background-position: left center;
-  padding: 0 0 0 1.5em;
-  font-size: 1.2rem;
+h3 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-shadow: 0px 1px 4px #00000017;
 }
 
-ul {
-  padding: 0;
-  margin: 0;
-}
-
-img {
-  width: 2em;
-  height: 2em;
-  margin: 0 1em;
+h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 0px 1px 4px #00000017;
 }
 
 p {
   font-size: 1.2rem;
   line-height: 1.5rem;
-  margin: 0.5em 0;
+  margin: auto 0 1em 1em;
+}
+
+/* Layout */
+
+nav {
+  position: fixed;
+  display: flex;
+  background-color: #00ffffa1;
+  top: 0;
+  margin: 0;
+  height: 5rem;
+  margin: 0;
+  width: 110%;
+  text-align: center;
+  justify-content: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+  left: -5%;
+}
+
+nav a {
+  flex: 1 1 100px;
+  order: 0;
+  width: 100%;
+  text-decoration: none;
+  color: #001011;
+  background-color: #00000017;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+nav li {
+  list-style: none;
+  margin: 0 0 0 1em;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+}
+
+header {
+  margin-top: 6rem;
+  width: 100%;
+}
+
+footer {
+  background-color: #001011;
+  color: #ffffff;
+  text-align: center;
+  border: #00000017 solid 0.2rem;
+}
+
+footer p {
+  margin: 1em;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.171);
+  margin: 2rem 0;
+}
+
+#About,
+#Experience,
+#Connect,
+#Skills,
+#Projects {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: #00000017 solid 0.2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.171);
+}
+
+#About {
+  background-color: #3aadb1a9;
+}
+
+#Experience {
+  background-color: #64e9ee9e;
+}
+
+#Skills {
+  background-color: #3aaeb9b6;
+  padding-bottom: 2em;
+}
+
+#Projects {
+  background-color: #64e9ee7d;
+}
+
+#Connect {
+  background-color: #079aad69;
+}
+
+#Social-Media {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 1rem;
+}
+
+#Skills p {
+  background-image: url("../images/bullet-point.png");
+  margin: 1em 0;
+  background-size: 1em;
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding: 0 0 0 1.5em;
+}
+
+#Wake-Tech {
+  gap: 1rem;
+  border: #00000017 solid 0.2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.171);
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin: 0 auto 2em;
+}
+
+#WT-Info {
+  justify-content: flex-end;
+  width: 100%;
+  display: flex;
+  margin: 0 2em auto 0;
+  padding: 2em 0;
+}
+
+#Projects li,
+nav li {
+  list-style-type: none;
+  display: flex;
+}
+
+#Projects li a,
+nav li a {
+  background-color: #00000017;
+  padding: 1rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease-in-out;
+  list-style-type: none;
+  color: #001011;
+  text-decoration: none;
+}
+
+#Projects li a:visited,
+#Projects li a:active {
+  text-decoration: none;
+  color: #001011;
+}
+
+#Projects li a:hover,
+nav li a:hover {
+  background-color: #000000bd;
+  color: #00ffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.39);
+  text-decoration: none;
+}
+
+#Experience h2 {
+  margin-bottom: 1em;
+}
+
+#Skills p {
+  margin: 1em;
+}
+
+#About p {
+  margin: 1em;
+}
+
+img {
+  width: 4em;
+  height: auto;
+  margin: 0 2em 2em;
+}
+
+@media all and (max-width: 600px) {
+  nav {
+    flex-wrap: wrap;
+  }
+  nav li {
+    flex: 1 1 50%;
+  }
+}
+
+@media all and (max-width: 400px) {
+  nav li {
+    flex: 1 1 100%;
+  }
 }
