@@ -150,11 +150,11 @@ section {
 
 #Skills {
   background-color: #3aaeb9b6;
-  padding-bottom: 2em;
 }
 
 #Projects {
   background-color: #64e9ee7d;
+  padding-bottom: 2em;
 }
 
 #Connect {
@@ -170,13 +170,16 @@ section {
   border-radius: 1rem;
 }
 
-#Skills p {
+#Skills li {
   background-image: url("../images/bullet-point.png");
-  margin: 1em 0;
   background-size: 1em;
   background-repeat: no-repeat;
   background-position: left center;
   padding: 0 0 0 1.5em;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin: auto 0 2em auto;
+  list-style-type: none;
 }
 
 #Wake-Tech {
@@ -229,10 +232,6 @@ nav li a:hover {
 
 #Experience h2 {
   margin-bottom: 1em;
-}
-
-#Skills p {
-  margin: 1em;
 }
 
 #About p {
