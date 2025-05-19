@@ -132,8 +132,7 @@ section {
 #About,
 #Experience,
 #Connect,
-#Skills,
-#Projects {
+#Skills {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -214,6 +213,16 @@ nav li,
   list-style-type: none;
 }
 
+#Projects ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  float: left;
+}
+
 #Projects li a {
   background-color: #00000017;
   border-radius: 1rem;
@@ -221,6 +230,8 @@ nav li,
   color: #001011;
   text-decoration: none;
   padding: 1em;
+  margin: 0.5em;
+  font-size: 1.5em;
 }
 
 #Projects li a:visited,
@@ -382,19 +393,16 @@ button:hover {
 @media (min-width: 600px) {
   nav ul {
     display: flex;
-    margin-left: -1em;
     padding: 0;
   }
 
   nav li {
-    margin: 0.5em;
-    padding: 1em;
     font-size: 10px;
   }
 
   nav li a {
     padding: 1em;
-    margin: 0.5em;
+    margin: 0.3em;
   }
 
   #Message button {
