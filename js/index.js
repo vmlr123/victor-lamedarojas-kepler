@@ -66,3 +66,41 @@ messageForm.addEventListener("submit", (event) => {
 
   messageSection.style.display = "block";
 });
+
+async function getProjects() {
+  try {
+    const response = await fetch("https://api.github.com/users/vmlr123/repos");
+    if (!response.ok) {
+      throw new Error(response.status);
+    }
+    const repositories = await response.json();
+    const projectSection = document.getElementById("Projects");
+    const projectList = projectSection.querySelector("ul");
+    console.log(repositories);
+
+    const unwantedRepositories = [
+      "git_test",
+      "testingduck",
+      "CSC256PublicGitRemote",
+      "csc256publicgitremoteclone",
+      "hello-world",
+      "CSC_120_Tic_Tac_Toe",
+    ];
+
+    for (const repository of repositories) {
+      const project = document.createElement("li");
+      const projectLink = document.createElement("a");
+      projectLink.innerText = repository.name;
+      projectLink.href = repository.html_url;
+      projectLink.target = "_blank";
+      projectLink.rel = "noopener noreferrer";
+      project.appendChild(projectLink);
+      if (!unwantedRepositories.includes(repository.name)) {
+        projectList.appendChild(project);
+      }
+    }
+  } catch (error) {
+    console.error("Error fetching repositories:", error);
+  }
+}
+const repositories = getProjects();
