@@ -13,7 +13,22 @@ footer.appendChild(copyright);
 
 // Select skills section and add skills to the list
 
-let skills = ["HTML", "CSS", "JavaScript", "GitHub"];
+let skills = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "GitHub",
+  "React",
+  "Node.js",
+  "Express.js",
+  "MongoDB",
+  "SQL",
+  "NoSQL",
+  "RESTful APIs",
+  "Docker",
+  "MongoDB",
+  "TypeScript",
+];
 let skillsSection = document.getElementById("Skills");
 let skillsList = skillsSection.querySelector("ul");
 // Go through each skill and create a list item for it
