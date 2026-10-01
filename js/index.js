@@ -28,6 +28,9 @@ let skills = [
   "Docker",
   "MongoDB",
   "TypeScript",
+  "Jira",
+  "Agile Methodologies",
+  "Unit Testing",
 ];
 let skillsSection = document.getElementById("Skills");
 let skillsList = skillsSection.querySelector("ul");
